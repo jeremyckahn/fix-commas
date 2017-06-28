@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const commander = require('commander');
+const { readFileSync }  = require('fs');
 const { echo } = require('shelljs');
 const fixCommas = require('../dist/index').default;
 
@@ -12,6 +13,8 @@ commander
 
 const { args } = commander;
 
-echo(
-  fixCommas(args)
+args.forEach(file =>
+  echo(
+    fixCommas(readFileSync(file, 'utf8'))
+  )
 );
