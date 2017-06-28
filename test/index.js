@@ -1,4 +1,4 @@
-import { fixCommas } from '../lib/index';
+import fixCommas from '../lib/index';
 import assert from 'assert';
 
 // Passing arrow functions ("lambdas") to Mocha is discouraged.

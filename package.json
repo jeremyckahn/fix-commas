@@ -3,7 +3,11 @@
   "version": "0.0.0",
   "description": "Fix comma style in a project",
   "main": "index.js",
+  "bin": {
+    "fix-commas": "./bin/fix-commas.js"
+  },
   "scripts": {
+    "build": "webpack",
     "test": "mocha ./node_modules/babel-core/register.js test/index.js",
     "test:watch": "nodemon --exec \"npm test\" --watch lib --watch test"
   },

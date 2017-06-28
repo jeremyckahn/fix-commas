@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
+const commander = require('commander');
 const { echo } = require('shelljs');
-const { fixCommas } = require('./lib/index');
-const { version } = require('./package.json');
+const fixCommas = require('../dist/index').default;
 
-var commander = require('commander');
+const { version } = require('../package.json');
 
 commander
   .version(version)
