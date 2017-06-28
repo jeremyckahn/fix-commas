@@ -1,0 +1,16 @@
+{
+  "name": "fix-commas",
+  "version": "0.0.0",
+  "description": "Fix comma style in a project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jeremyckahn@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.10.0",
+    "shelljs": "^0.7.8"
+  },
+  "devDependencies": {}
+}
