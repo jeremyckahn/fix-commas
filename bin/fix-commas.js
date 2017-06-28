@@ -2,7 +2,6 @@
 
 const commander = require('commander');
 const { readFileSync }  = require('fs');
-const { echo } = require('shelljs');
 const fixCommas = require('../dist/index').default;
 
 const { version } = require('../package.json');
@@ -14,7 +13,7 @@ commander
 const { args } = commander;
 
 args.forEach(file =>
-  echo(
+  process.stdout.write(
     fixCommas(readFileSync(file, 'utf8'))
   )
 );
