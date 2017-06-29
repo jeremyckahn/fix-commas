@@ -9,7 +9,9 @@
   "scripts": {
     "build": "webpack",
     "test": "mocha ./node_modules/babel-core/register.js test/index.js",
-    "test:watch": "nodemon --exec \"npm test\" --watch lib --watch test"
+    "test:watch": "nodemon --exec \"npm test\" --watch lib --watch test",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "author": "jeremyckahn@gmail.com",
   "license": "MIT",
@@ -23,5 +25,8 @@
     "mocha": "^3.4.2",
     "nodemon": "^1.11.0",
     "webpack": "^3.0.0"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }

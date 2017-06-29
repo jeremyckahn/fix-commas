@@ -9,10 +9,7 @@ Because ESLint's `--fix` option for [`comma-style`](http://eslint.org/docs/rules
 ## Installation
 
 ```
-git clone git@github.com:jeremyckahn/fix-commas.git
-cd fix-commas
-npm i
-npm link
+npm i -g fix-commas
 ```
 
 ## Usage
