@@ -14,6 +14,11 @@ commander
 
 const { args: files } = commander;
 
+if (!files.length) {
+  commander.outputHelp();
+  process.exit(0);
+}
+
 files.forEach(file => {
   const fixedCode = fixCommas(readFileSync(file, 'utf8'));
 
