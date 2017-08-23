@@ -8,17 +8,16 @@ const { version } = require('../package.json');
 
 commander
   .version(version)
+  .usage('[options] <file ...>')
   .option('--fix', 'Overwrite file with fixed code')
   .parse(process.argv);
 
-const { args } = commander;
+const { args: files } = commander;
 
-args.forEach(file => {
+files.forEach(file => {
   const fixedCode = fixCommas(readFileSync(file, 'utf8'));
 
-  if (commander.fix) {
-    writeFileSync(file, fixedCode, 'utf8')
-  } else {
+  commander.fix ?
+    writeFileSync(file, fixedCode, 'utf8') :
     process.stdout.write(fixedCode)
-  }
 });
