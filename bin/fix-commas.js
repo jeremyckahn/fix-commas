@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const commander = require('commander');
-const { readFileSync, writeFileSync }  = require('fs');
+const { readFileSync, writeFileSync } = require('fs');
 const fixCommas = require('../dist/index').default;
 
 const { version } = require('../package.json');
