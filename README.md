@@ -32,7 +32,7 @@ Omitting `--fix` prints the fixed text to stdout.
 
 This tool is pretty bare-bones:
 
-  * No support for comments
+  * Only partial support for comments
   * Only goes from comma-first to comma-last, not the other way around
 
 If you'd like to improve this project, pull requests are welcomed!
